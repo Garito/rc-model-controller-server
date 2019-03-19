@@ -1,0 +1,12 @@
+[Unit]
+Description=RC model controller server
+After=multi-user.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/rc-model-controller-server/
+ExecStart=/usr/bin/python3 /home/ubuntu/rc-model-controller-server/app.py
+
+[Install]
+WantedBy=multi-user.target
